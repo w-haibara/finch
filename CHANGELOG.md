@@ -1,5 +1,82 @@
 # Changelog
 
+## [1.0.0](https://github.com/w-haibara/finch/compare/v1.0.1...v1.0.0) (2023-12-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* persists nerdctl user data ([#182](https://github.com/w-haibara/finch/issues/182))
+* changes persistent disk path to prevent collisions
+
+### Features
+
+* add `finch cp` command ([#135](https://github.com/w-haibara/finch/issues/135)) ([5989361](https://github.com/w-haibara/finch/commit/598936166c6fd4a6999e4d3e8d074447e122aea7))
+* add `finch vm status` command ([#83](https://github.com/w-haibara/finch/issues/83)) ([37d74d0](https://github.com/w-haibara/finch/commit/37d74d0b82c41f439715d0a07e723fd5e5a9a617))
+* add config to support additional directories ([#128](https://github.com/w-haibara/finch/issues/128)) ([0ceb060](https://github.com/w-haibara/finch/commit/0ceb0602c6e1b90b25fa9de19303ea6ccdece6d7))
+* add experimental support for Cosign signing and verification ([#296](https://github.com/w-haibara/finch/issues/296)) ([84c2634](https://github.com/w-haibara/finch/commit/84c2634b7c1226ba9746d0cda4d22ec571454160))
+* adding config option for SOCI installation on VM ([#506](https://github.com/w-haibara/finch/issues/506)) ([a2e077b](https://github.com/w-haibara/finch/commit/a2e077b8f72dc8d8d833aedce31b3ad3f9f45eb4))
+* adds a --force flag to vm stop and remove ([#178](https://github.com/w-haibara/finch/issues/178)) ([d499a7d](https://github.com/w-haibara/finch/commit/d499a7d712bcc726f331ff07f0e0855ddc9046fa))
+* adds support bundles ([#210](https://github.com/w-haibara/finch/issues/210)) ([cc6be65](https://github.com/w-haibara/finch/commit/cc6be6577c97697e99112a7b693eff2664b747ef))
+* ECR credential integration into Finch  ([#462](https://github.com/w-haibara/finch/issues/462)) ([d3514b3](https://github.com/w-haibara/finch/commit/d3514b3dbe69e1bed3d40838af01ebec184f7413))
+* Print version with Client and Server ([#108](https://github.com/w-haibara/finch/issues/108)) ([7f7cdda](https://github.com/w-haibara/finch/commit/7f7cdda1d21e430c259eb24a82c6b5784606cbac))
+* saves containerd user data to a persistent disk ([#133](https://github.com/w-haibara/finch/issues/133)) ([fccb4f3](https://github.com/w-haibara/finch/commit/fccb4f3530b5abc7943db921c25c4f01ea76d725))
+* support push with SOCI ([#578](https://github.com/w-haibara/finch/issues/578)) ([69721b7](https://github.com/w-haibara/finch/commit/69721b76151a4c24d82cdc1c9338bacf72afb15d))
+* Support special IP host-gateway in --add-host flag ([#216](https://github.com/w-haibara/finch/issues/216)) ([9a38c8e](https://github.com/w-haibara/finch/commit/9a38c8e6bc8aa155cda0cdc5b4d80bb12bac8eb8))
+* supports adding files inside the VM to support bundles ([#549](https://github.com/w-haibara/finch/issues/549)) ([3b1df46](https://github.com/w-haibara/finch/commit/3b1df4697e7b020d6c7339fb71bacf62ca0b3ee0))
+
+
+### Bug Fixes
+
+* Add cleanup script to Makefile ([#444](https://github.com/w-haibara/finch/issues/444)) ([da91f87](https://github.com/w-haibara/finch/commit/da91f87369e5fde221b8edbac374954e71dae947))
+* always force stop when using Virtualization.framework ([#350](https://github.com/w-haibara/finch/issues/350)) ([c521f1f](https://github.com/w-haibara/finch/commit/c521f1f65d406094c653b7a78d0009285b9fc627))
+* changes persistent disk path to prevent collisions ([3eb66a2](https://github.com/w-haibara/finch/commit/3eb66a21bcbf56dd8e4465bfc3ed840903b069d9))
+* Clean up all previous finch version installation registries in postinstall and uninstall ([#688](https://github.com/w-haibara/finch/issues/688)) ([9afc0b9](https://github.com/w-haibara/finch/commit/9afc0b9a5e73a3c261aeac87b977e44129b311bd))
+* configure aws creds in sync submodules/deps action ([#518](https://github.com/w-haibara/finch/issues/518)) ([b67452e](https://github.com/w-haibara/finch/commit/b67452e012d5d00f2ff66e023b4672f7957fe625))
+* Configure Buildkit Namespace as Env Variable ([#129](https://github.com/w-haibara/finch/issues/129)) ([ffb90be](https://github.com/w-haibara/finch/commit/ffb90beeeeef7cb8db5706f9198e06d6e111f53f))
+* correctly handle local environment value pass-through ([#158](https://github.com/w-haibara/finch/issues/158)) ([e138f10](https://github.com/w-haibara/finch/commit/e138f1053fe9219ae6584e49d38c43f306b75e6b))
+* Correctly set and pick up environment variables ([#315](https://github.com/w-haibara/finch/issues/315)) ([05227ce](https://github.com/w-haibara/finch/commit/05227ce03055223bc7ffd10c634cc75a9632634e))
+* ecr credential helper hash check ([#668](https://github.com/w-haibara/finch/issues/668)) ([4b1b0a2](https://github.com/w-haibara/finch/commit/4b1b0a2fa515bcfaaa6784ffa53a5918245cbd72))
+* ecr creds helper and credential_process ([#510](https://github.com/w-haibara/finch/issues/510)) ([0525753](https://github.com/w-haibara/finch/commit/0525753105403e27e5d1372588c0c87aa6b6cbe6))
+* enables bridge-nf-call-iptables by default ([#539](https://github.com/w-haibara/finch/issues/539)) ([6ea1499](https://github.com/w-haibara/finch/commit/6ea1499c1320545ba4efe8a7820dcf0998e28782))
+* error readable by using the right placeholder ([#39](https://github.com/w-haibara/finch/issues/39)) ([8e5f38d](https://github.com/w-haibara/finch/commit/8e5f38d2b994dadf53f57430eaa0a59b8cafd2f8))
+* explicitly set permissions for socket_vmnet dependencies ([#363](https://github.com/w-haibara/finch/issues/363)) ([0801b88](https://github.com/w-haibara/finch/commit/0801b8841776e7a08d2a0826bbca535310b02f37))
+* fix the misleading log when applying invalid config ([#119](https://github.com/w-haibara/finch/issues/119)) ([b4f74c5](https://github.com/w-haibara/finch/commit/b4f74c5a61f78034cc761ea3977b17e36a624692))
+* Fix to be able to run finch build with --ssh option ([#696](https://github.com/w-haibara/finch/issues/696)) ([4d1e6cf](https://github.com/w-haibara/finch/commit/4d1e6cf6d8f4b6f2cbdf0229e8dcf4ad0c80d80c))
+* Fix to delete ~/.finch when uninstalling finch ([#703](https://github.com/w-haibara/finch/issues/703)) ([8d7389f](https://github.com/w-haibara/finch/commit/8d7389f607fc0211ebd6cfafe13197b945d877a3))
+* give pull request write permissions to sync job ([#520](https://github.com/w-haibara/finch/issues/520)) ([55b5235](https://github.com/w-haibara/finch/commit/55b5235d50feb6557108c00cd8543d21f1fdf315))
+* give token write perms to sync-submodules ([#519](https://github.com/w-haibara/finch/issues/519)) ([8b639ea](https://github.com/w-haibara/finch/commit/8b639eac14691caa99a6bfddd61be0b811a796d9))
+* ignore .ssh pub keys ([#109](https://github.com/w-haibara/finch/issues/109)) ([0b74597](https://github.com/w-haibara/finch/commit/0b745979ae142c73e3ef5be8d6fd31f142a5d6cd))
+* improve creds helper UX ([#673](https://github.com/w-haibara/finch/issues/673)) ([bc238cf](https://github.com/w-haibara/finch/commit/bc238cf9383d0fbc983a7f76f2cc15821eafd265))
+* **Makefile:** use POSIX tar syntax for stdin ([#529](https://github.com/w-haibara/finch/issues/529)) ([e222131](https://github.com/w-haibara/finch/commit/e2221310e1725b3a6072abe12e72f01859ce3320))
+* Mount /var/folders to finch vm ([#525](https://github.com/w-haibara/finch/issues/525)) ([c97d2e9](https://github.com/w-haibara/finch/commit/c97d2e93edaf139c3960620ec00454f856a8daee))
+* option to use installed lima for SOCI e2e tests ([#533](https://github.com/w-haibara/finch/issues/533)) ([8b66659](https://github.com/w-haibara/finch/commit/8b666590631235f6430d652d5c50f0047a120893))
+* parse --add-host special ip with equal sign ([#229](https://github.com/w-haibara/finch/issues/229)) ([fb4b62b](https://github.com/w-haibara/finch/commit/fb4b62bc6987ed786da8f1a351ea8200206be941))
+* persists nerdctl user data ([#182](https://github.com/w-haibara/finch/issues/182)) ([59f372c](https://github.com/w-haibara/finch/commit/59f372cb0875f800015abe989d4eba6b8df92e42))
+* persists network user data ([#211](https://github.com/w-haibara/finch/issues/211)) ([f6baf82](https://github.com/w-haibara/finch/commit/f6baf82171d6c487efb21bc0eb45d772124e04b2))
+* print debug logs after newline ([#273](https://github.com/w-haibara/finch/issues/273)) ([8faa7de](https://github.com/w-haibara/finch/commit/8faa7de81bbb5eb222c5abb4b1239ef8b27e15cb))
+* print debug logs when lima disk command fails ([#270](https://github.com/w-haibara/finch/issues/270)) ([78a3f50](https://github.com/w-haibara/finch/commit/78a3f5002e10442bf818015de55b940cd4bcf19d))
+* quote recursive calls to make ([#515](https://github.com/w-haibara/finch/issues/515)) ([d603096](https://github.com/w-haibara/finch/commit/d6030965414e80e1f3c550e67097ce5f34aeff41))
+* remove virtual machine image when running make clean ([98c8ee4](https://github.com/w-haibara/finch/commit/98c8ee4f783d01cb1340e77b508d868c3bb4bf04))
+* resolve shellcheck warnings ([#684](https://github.com/w-haibara/finch/issues/684)) ([d9f695a](https://github.com/w-haibara/finch/commit/d9f695a39f17af6ab00722fbf5191b6fa5c9166b))
+* Restart buildkit after containerd when provisioning ([#461](https://github.com/w-haibara/finch/issues/461)) ([fca1828](https://github.com/w-haibara/finch/commit/fca182877ca616257527f6186dd1e88b2919feeb))
+* run SOCI as a systemd service ([#667](https://github.com/w-haibara/finch/issues/667)) ([24fd649](https://github.com/w-haibara/finch/commit/24fd649152b3ca18a1024d3a2ea40806c0c96cf2))
+* soci being reset on vm stop/start ([#672](https://github.com/w-haibara/finch/issues/672)) ([9df7d32](https://github.com/w-haibara/finch/commit/9df7d325b25fe98fdb8327bc4603ae4441b6a190))
+* sort volume args in DOCKER_COMPAT mode ([#417](https://github.com/w-haibara/finch/issues/417)) ([6a8ca1a](https://github.com/w-haibara/finch/commit/6a8ca1a559dada6ed320c9454fbc3229446a0a40))
+* Stop lima process in postinstall and uninstall ([#438](https://github.com/w-haibara/finch/issues/438)) ([975c4ee](https://github.com/w-haibara/finch/commit/975c4ee42c1529673a51382c62c4096dc663f80a))
+* switch from rootless containers to rootful containers ([#232](https://github.com/w-haibara/finch/issues/232)) ([ae43a07](https://github.com/w-haibara/finch/commit/ae43a0779c778cc3656724f84b5cdfd8ab087798))
+* Use LimaUser method instead of host user name ([#712](https://github.com/w-haibara/finch/issues/712)) ([7c02e08](https://github.com/w-haibara/finch/commit/7c02e08394f667e1f69cd304ef0258c1f0ff1c0f))
+
+
+### Reverts
+
+* "chore(main): release 1.0.1" ([#727](https://github.com/w-haibara/finch/issues/727)) ([52e08d2](https://github.com/w-haibara/finch/commit/52e08d27d8a29b4988cb228d3d270d85ba54337a))
+* "fix: resolve shellcheck warnings" ([#725](https://github.com/w-haibara/finch/issues/725)) ([8ea255a](https://github.com/w-haibara/finch/commit/8ea255abb64c653a8c35e82c9c17aec9904278c5))
+
+
+### Miscellaneous Chores
+
+* update Release-As version to 1.0.0 (not-squashed) ([2c97323](https://github.com/w-haibara/finch/commit/2c97323deccfbc860e304b3297c8e51f91b7e2c0))
+
 ## [1.0.0](https://github.com/runfinch/finch/compare/v0.9.0...v1.0.0) (2023-10-31)
 
 
